@@ -1,0 +1,25 @@
+server:
+  port: 8080
+  context-path: /wanbei
+
+
+
+#数据库配置
+jdbc:
+  druid:
+    url: jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&characterEncoding=UTF8&zeroDateTimeBehavior=convertToNull
+    user: root
+    password: root
+    filters: stat
+    maxActive: 20
+    initialSize: 1
+    maxWait: 60000
+    minIdle: 1
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: select 'x'
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxOpenPreparedStatements: 20
